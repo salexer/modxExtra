@@ -316,7 +316,7 @@ class modExtraPackage
                 'name' => $name,
                 'category' => 0,
                 'description' => @$data['description'],
-                'plugincode' => $this::_getContent($this->config['core'] . 'elements/plugins/' . $data['file'] . '.php'),
+                'plugincode' => $this::_getContent($this->config['core'] . 'elements/plugins/' . $data['file']),
                 'static' => !empty($this->config['static']['plugins']),
                 'source' => 1,
                 'static_file' => 'core/components/' . $this->config['name_lower'] . '/elements/plugins/' . $data['file'] . '.php',
@@ -370,7 +370,7 @@ class modExtraPackage
                 'id' => 0,
                 'name' => $name,
                 'description' => @$data['description'],
-                'snippet' => $this::_getContent($this->config['core'] . 'elements/snippets/' . $data['file'] . '.php'),
+                'snippet' => $this::_getContent($this->config['core'] . 'elements/snippets/' . $data['file']),
                 'static' => !empty($this->config['static']['snippets']),
                 'source' => 1,
                 'static_file' => 'core/components/' . $this->config['name_lower'] . '/elements/snippets/' . $data['file'] . '.php',
@@ -415,7 +415,7 @@ class modExtraPackage
                 'id' => 0,
                 'name' => $name,
                 'description' => @$data['description'],
-                'snippet' => $this::_getContent($this->config['core'] . 'elements/chunks/' . $data['file'] . '.tpl'),
+                'snippet' => $this::_getContent($this->config['core'] . 'elements/chunks/' . $data['file']),
                 'static' => !empty($this->config['static']['chunks']),
                 'source' => 1,
                 'static_file' => 'core/components/' . $this->config['name_lower'] . '/elements/chunks/' . $data['file'] . '.tpl',
@@ -452,7 +452,7 @@ class modExtraPackage
             $objects[$name]->fromArray(array_merge([
                 'templatename' => $name,
                 'description' => $data['description'],
-                'content' => $this::_getContent($this->config['core'] . 'elements/templates/' . $data['file'] . '.tpl'),
+                'content' => $this::_getContent($this->config['core'] . 'elements/templates/' . $data['file']),
                 'static' => !empty($this->config['static']['templates']),
                 'source' => 1,
                 'static_file' => 'core/components/' . $this->config['name_lower'] . '/elements/templates/' . $data['file'] . '.tpl',
@@ -506,7 +506,7 @@ class modExtraPackage
             'uri_override' => false,
             'richtext' => false,
             'searchable' => true,
-            'content' => $this::_getContent($this->config['core'] . 'elements/resources/' . $file . '.tpl'),
+            'content' => $this::_getContent($this->config['core'] . 'elements/resources/' . $file),
         ], $data), '', true, true);
 
         if (!empty($data['groups'])) {
